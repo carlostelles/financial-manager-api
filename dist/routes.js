@@ -1,0 +1,33 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const auth_1 = __importDefault(require("./middlewares/auth"));
+const userController_1 = __importDefault(require("./controllers/userController"));
+const transactionCategoryController_1 = __importDefault(require("./controllers/transactionCategoryController"));
+const transactionController_1 = __importDefault(require("./controllers/transactionController"));
+const router = express_1.default.Router();
+router.post('/register', userController_1.default.register);
+router.post('/auth', userController_1.default.auth);
+router.post('/forgot-password', userController_1.default.forgotPassword);
+router.post('/reset-password', userController_1.default.resetPassword);
+router.post('/confirm-account', userController_1.default.accountConfirm);
+router.use(auth_1.default);
+router.get('/users/:id', userController_1.default.findById);
+router.put('/users/:id', userController_1.default.update);
+router.delete('/users/:id', userController_1.default.inactivate);
+router.get('/users', userController_1.default.find);
+router.get('/transaction-category/:id', transactionCategoryController_1.default.findById);
+router.put('/transaction-category/:id', transactionCategoryController_1.default.update);
+router.delete('/transaction-category/:id', transactionCategoryController_1.default.inactivate);
+router.get('/transaction-category', transactionCategoryController_1.default.find);
+router.post('/transaction-category', transactionCategoryController_1.default.create);
+router.get('/transaction', transactionController_1.default.find);
+router.post('/transaction', transactionController_1.default.create);
+router.get('/transaction/:id', transactionController_1.default.findById);
+router.put('/transaction/:id', transactionController_1.default.update);
+router.delete('/transaction/:id', transactionController_1.default.remove);
+exports.default = router;
+//# sourceMappingURL=routes.js.map

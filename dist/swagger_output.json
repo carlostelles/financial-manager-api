@@ -1,0 +1,92 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Financial Manager API",
+        "description": ""
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "tags": [],
+    "schemes": [
+        "http"
+    ],
+    "securityDefinitions": {},
+    "consumes": [],
+    "produces": [],
+    "paths": {
+        "/": {
+            "get": {
+                "tags": [],
+                "description": "",
+                "parameters": [],
+                "responses": {}
+            }
+        },
+        "/users": {
+            "get": {
+                "tags": [],
+                "description": "",
+                "parameters": [],
+                "responses": {}
+            },
+            "post": {
+                "tags": [],
+                "description": "",
+                "parameters": [],
+                "responses": {}
+            }
+        },
+        "/users/{id}": {
+            "get": {
+                "tags": [],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            },
+            "put": {
+                "tags": [],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            },
+            "delete": {
+                "tags": [],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            },
+            "patch": {
+                "tags": [],
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        }
+    },
+    "definitions": {}
+}

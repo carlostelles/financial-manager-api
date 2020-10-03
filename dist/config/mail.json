@@ -1,0 +1,7 @@
+{
+    "host": "smtp.mailtrap.io",
+    "port": 2525,
+    "user": "4df4c6709932bf",
+    "pass": "81aef496aa9867",
+    "from": "Carlos Telles <contato@carlostelles.xyz>"
+}

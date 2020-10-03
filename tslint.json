@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "tslint-config-airbnb",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "align": [true, "parameters"],
+    "import-name": false,
+    "max-line-length": [true, 340],
+    "no-empty": true,
+    "trailing-comma": [false],
+    "variable-name": [false]
+  }
+}
